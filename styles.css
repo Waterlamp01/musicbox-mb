@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+
+
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle input {
+    display: none;
+}
+
+.theme-toggle .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #4a5568;
+    border-radius: 20px;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.theme-toggle .slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: 0.3s;
+}
+
+.theme-toggle input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: #3CB371;
+    color: #fff;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.about, .features, .download, .screenshots {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body .about, body .features, body .download, body .screenshots {
+    background-color: #333;
+    color: #fff;
+}
+
+.features ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.features li {
+    margin: 0.5rem 0;
+}
+
+.screenshots .images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.screenshots img {
+    width: 360px; /* Увеличиваем ширину изображений */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.screenshots img:hover {
+    transform: scale(1.05); /* Небольшой эффект увеличения при наведении */
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #3CB371;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.download-button:hover {
+    background-color: #2E8B57;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #3CB371;
+    color: #fff;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
